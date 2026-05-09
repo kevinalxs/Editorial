@@ -362,6 +362,7 @@ async function runAgent(options = {}) {
       }
     } catch (err) {
       console.error(`  ✗ Erreur sur "${page.titre}":`, err.message);
+      console.error(`  Détail:`, err.status, err.code, err.error);
       results.push({ id: page.id, titre: page.titre, status: "error", error: err.message });
     }
   }
