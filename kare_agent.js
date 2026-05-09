@@ -358,7 +358,7 @@ async function runAgent(options = {}) {
 
       // Pause entre les appels pour respecter les rate limits
       if (pages.length > 1) {
-        await new Promise((r) => setTimeout(r, 3000));
+        await new Promise((r) => setTimeout(r, 30000));
       }
     } catch (err) {
       console.error(`  ✗ Erreur sur "${page.titre}":`, err.message);
