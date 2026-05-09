@@ -61,7 +61,6 @@ app.post("/webhook/batch", async (req, res) => {
   res.json({ status: "accepted", message: "Batch en cours" });
 
   try {
-    await runAgent({ processAll: true });
   } catch (err) {
     console.error("Erreur batch:", err);
   }
