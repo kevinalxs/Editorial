@@ -202,7 +202,7 @@ async function generateContent(page) {
   console.log(`\n📝 Génération : "${page.titre}" [${page.format}]`);
 
   const response = await anthropic.messages.create({
-    model: "claude-sonnet-4-20250514",
+    model: "claude-sonnet-4-5",
     max_tokens: 4000,
     system: KARE_SYSTEM_PROMPT,
     tools: [
