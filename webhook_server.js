@@ -72,7 +72,7 @@ app.get("/health", (req, res) => {
   res.json({ status: "ok", agent: "KARE Editorial", version: "1.0" });
 });
 
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 8080;
 app.listen(PORT, () => {
   console.log(`🚀 KARE Agent en écoute sur le port ${PORT}`);
 });
