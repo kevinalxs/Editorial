@@ -24,7 +24,7 @@ const WEBHOOK_SECRET = process.env.WEBHOOK_SECRET || "kare-secret-2026";
  * Body attendu : { pageId: "notion-page-id", secret: "..." }
  */
 app.post("/webhook/notion", async (req, res) => {
-  const { pageId, secret } = req.body;
+  const body = typeof req.body === 'string' ? JSON.parse(req.body) : req.body; const { pageId, secret } = body;
 
   // Vérification du secret
   if (secret !== WEBHOOK_SECRET) {
